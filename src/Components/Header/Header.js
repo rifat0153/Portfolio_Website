@@ -45,8 +45,8 @@ export default function Header(props) {
                 </AppBar>
             </HideOnScroll>
             <Toolbar />
-            <Container> <Box style={{ height: '200vh' }}></Box>
-            </Container>
+            {/* <Container> <Box style={{ height: '200vh' }}></Box>
+            </Container> */}
         </React.Fragment>
     );
 }

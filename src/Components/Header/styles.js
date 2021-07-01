@@ -1,12 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
-
-
-
 const useStyles = makeStyles((theme) => ({
     appbar: {
-        background: '#a33494',
-        color: 'white'
+        background: 'transparent',
+        color: 'black'
     },
     menuItem: {
         marginLeft: theme.spacing(2),
