@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         margin: 0,
         padding: 0,
+        width: '100%',
     },
     insideGrid: {
         margin: 20,

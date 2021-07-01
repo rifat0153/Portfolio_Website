@@ -10,9 +10,20 @@ export default function Landing() {
     const classes = useStyles()
 
     return (
-        <Grid container className={classes.root}>
-            <Header />
-            <Profile />
+        <Grid container className={classes.root} spacing={0} >
+
+            <Grid item sm={12}>
+                <Header />
+            </Grid>
+            <Grid item sm={12}>
+                <Profile />
+            </Grid>
+            {/* <Grid item sm={12}>
+                <Project />
+            </Grid> */}
+            {/* <Grid item style={{ height: '1000px', backgroundColor: 'blueviolet', width: '100vw' }} >
+
+            </Grid> */}
             <Project />
         </Grid>
     )
