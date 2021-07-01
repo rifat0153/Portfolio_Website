@@ -1,37 +1,52 @@
-import React from 'react'
-import { Button, Col, Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap'
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Slide from '@material-ui/core/Slide';
+import useStyles from './styles';
 
-import './styles.css'
+function HideOnScroll(props) {
+    const { children, window } = props;
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
-export default function Header() {
     return (
-        <>
-            <Navbar className='color-nav' collapseOnSelect sticky="top" expand="lg"    >
-                <Container >
-                    <Navbar.Brand lg href="#home">React Portfolio</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav" >
+        <Slide appear={false} direction="down" in={!trigger}>
+            {children}
+        </Slide>
+    );
+}
 
-                        <Nav className='me-auto'>
+HideOnScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+    window: PropTypes.func,
+};
 
-                        </Nav>
+export default function Header(props) {
+    const classes = useStyles()
 
-                        <Nav className="justify-content-end"  >
-                            <Nav.Item style={{ marginRight: 100 }} >
-                                <Nav.Link href="/home">Home</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item style={{ marginRight: 100 }} >
-                                <Nav.Link eventKey="link-1">About</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item style={{ marginRight: 100 }} >
-                                <Nav.Link eventKey="link-2">Contact</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
+    return (
+        <React.Fragment>
+            <HideOnScroll {...props}>
+                <AppBar className={classes.appbar}  >
+                    <Toolbar>
+                        <Typography variant="h6" style={{ flexGrow: 1 }}  >Mahbubur Rahman</Typography>
+                        <Typography className={classes.menuItem}  >About</Typography>
+                        <Typography className={classes.menuItem} >Contact</Typography>
+                    </Toolbar>
 
-                    </Navbar.Collapse>
-
-                </Container>
-            </Navbar>
-        </>
-    )
+                </AppBar>
+            </HideOnScroll>
+            <Toolbar />
+            <Container> <Box style={{ height: '200vh' }}></Box>
+            </Container>
+        </React.Fragment>
+    );
 }
