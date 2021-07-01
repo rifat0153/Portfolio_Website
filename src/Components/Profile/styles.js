@@ -1,20 +1,22 @@
 import { makeStyles } from "@material-ui/core";
+import profileBg from '../../static/images/pro_bg2.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: 'lightgrey',
+        backgroundImage: `url(${profileBg})`,
+        backgroundPosition: 'center',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // height: '300px',
+        // height: '500px',
         // width: '100%',
     },
     avatarGrid: {
-        background: 'lightblue',
+        background: 'transparent',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // height: '250px',
+        height: '350px',
     },
     avatarImg: {
         height: theme.spacing(20),
@@ -24,12 +26,17 @@ const useStyles = makeStyles((theme) => ({
 
     },
     nameGrid: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    nameItemGrid: {
         background: 'orange',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        // padding: theme.spacing(6),
+        // width: '80%',
     },
 }))
 
