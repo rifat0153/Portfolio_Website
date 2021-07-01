@@ -29,7 +29,7 @@ export default function Header(props) {
     return (
         <React.Fragment>
             <HideOnScroll {...props}>
-                <AppBar elevation={0} className={classes.appbar}  >
+                <AppBar elevation={10} className={classes.appbar}  >
                     <Toolbar>
                         <Typography variant="h6" style={{ flexGrow: 1 }}  >Mahbubur Rahman</Typography>
                         <Typography className={classes.menuItem}  >About</Typography>
