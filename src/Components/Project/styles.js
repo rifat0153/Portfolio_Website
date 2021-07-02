@@ -12,13 +12,12 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     insideGrid: {
-        margin: 20,
+        // margin: 20,
         [theme.breakpoints.down('md')]: {
             margin: 0,
         },
         backgroundColor: 'tranparent',
         display: 'flex',
-        // opacity: '0.99',
         justifyContent: 'center',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
