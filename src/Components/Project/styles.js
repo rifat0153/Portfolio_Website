@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: '#D3D3D3',
         display: 'flex',
+        marginTop: 30,
         justifyContent: 'center',
         alignItems: 'center',
         margin: 0,
@@ -12,10 +13,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     insideGrid: {
-        // margin: 20,
-        [theme.breakpoints.down('md')]: {
-            margin: 0,
-        },
         backgroundColor: 'tranparent',
         display: 'flex',
         justifyContent: 'center',
