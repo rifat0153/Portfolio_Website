@@ -31,9 +31,11 @@ const useStyles = makeStyles((theme) => ({
     },
     appGrid: {
         height: 500,
-        // [theme.breakpoints.down('sm')]: {
-        //     height: 600,
-        // },
+        [theme.breakpoints.down('sm')]: {
+            height: 600,
+            paddingLeft: 40,
+            paddingRight: 40,
+        },
         width: '100%',
         backgroundColor: 'transparent',
         borderRadius: '20px',
@@ -58,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'start',
         alignItems: 'start',
         padding: theme.spacing(2),
+    },
+    techRow: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 }))
 
