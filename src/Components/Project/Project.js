@@ -12,7 +12,7 @@ export default function Project() {
         <React.Fragment>
             <Grid container className={classes.root} spacing={0}>
 
-                <Grid item container className={classes.insideGrid} spacing={0}>
+                <Grid itemya container className={classes.insideGrid} spacing={0}>
                     <Grid container item sm={10} md={5} style={{ justifyContent: 'center', alignItems: 'center' }}>
                         <Grid item sm={6} md={4} className={classes.appGrid}  >
                             <img className={classes.image} src={app1_2} alt="a" />

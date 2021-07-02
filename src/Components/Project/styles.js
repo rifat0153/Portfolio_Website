@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
             height: 600,
         },
         width: '100%',
-        backgroundColor: 'grey',
+        backgroundColor: 'transparent',
         borderRadius: '20px',
-        margin: theme.spacing(2)
+        padding: theme.spacing(2),
     },
     image: {
         height: '100%',
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     appDescription: {
         height: 500,
         width: '100%',
-        margin: theme.spacing(2),
+        padding: theme.spacing(2),
         // opacity: '0.8',
 
     }
