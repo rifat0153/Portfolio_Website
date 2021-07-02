@@ -1,16 +1,24 @@
 import { makeStyles } from "@material-ui/core";
-import app1_1 from '../../static/images/app1_1.png';
 
 const useStyles = makeStyles((theme) => ({
+    // div: {
+    //     clipPath: 'polygon(0 0, 100% 8%, 100% 82%, 0% 100%)',
+    // },
     root: {
+        // height: 600,
         backgroundColor: '#D3D3D3',
         display: 'flex',
-        marginTop: 30,
+        paddingTop: 80,
+        paddingBottom: 80,
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 0,
-        padding: 0,
         width: '100%',
+        clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0% 100%)',
+        [theme.breakpoints.down('sm')]: {
+            clipPath: 'polygon(0 0, 100% 2%, 100% 98%, 0% 100%)',
+            paddingTop: 50,
+            paddingBottom: 0,
+        },
     },
     insideGrid: {
         backgroundColor: 'tranparent',
@@ -23,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
     },
     appGrid: {
         height: 500,
-        [theme.breakpoints.down('sm')]: {
-            height: 600,
-        },
+        // [theme.breakpoints.down('sm')]: {
+        //     height: 600,
+        // },
         width: '100%',
         backgroundColor: 'transparent',
         borderRadius: '20px',
@@ -33,17 +41,23 @@ const useStyles = makeStyles((theme) => ({
     },
     image: {
         height: '100%',
-        border: '2px solid orange',
-        boxShadow: '3px 3px 2px 2px #b1c7b7',
+        // border: '2px solid orange',
+        boxShadow: '3px 3px 2px 2px lightblue',
         width: '100%',
         borderRadius: '20px',
     },
     appDescription: {
-        height: 500,
+        paddingBottom: theme.spacing(8),
+        // height: '100%',
+        // [theme.breakpoints.down('sm')]: {
+        //     height: 350,
+        // },
         width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'start',
+        alignItems: 'start',
         padding: theme.spacing(2),
-        // opacity: '0.8',
-
     }
 }))
 
