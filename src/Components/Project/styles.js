@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0% 100%)',
+        clipPath: 'polygon(0 0, 100% 5%, 100% 95%, 0% 100%)',
         [theme.breakpoints.down('sm')]: {
             clipPath: 'polygon(0 0, 100% 2%, 100% 98%, 0% 100%)',
             paddingTop: 50,

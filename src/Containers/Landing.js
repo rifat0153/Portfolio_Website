@@ -4,6 +4,7 @@ import Header from '../Components/Header/Header'
 import Project from '../Components/Project/Project';
 import Profile from './../Components/Profile/Profile';
 import useStyles from './styles';
+import ProjectList from './../Components/Project/ProjectList';
 
 export default function Landing() {
 
@@ -18,13 +19,7 @@ export default function Landing() {
             <Grid item sm={12}>
                 <Profile />
             </Grid>
-            {/* <Grid item sm={12}>
-                <Project />
-            </Grid> */}
-            {/* <Grid item style={{ height: '1000px', backgroundColor: 'blueviolet', width: '100vw' }} >
-
-            </Grid> */}
-            <Project />
+            <ProjectList />
         </Grid>
     )
 }

@@ -9,7 +9,7 @@ export default function Project() {
     const classes = useStyles();
 
     return (
-        <React.Fragment>
+        <>
             <Grid container className={classes.root} spacing={0}>
 
                 <Grid item container sm={12} md={12} className={classes.insideGrid} spacing={0}>
@@ -41,11 +41,7 @@ export default function Project() {
                     </Grid>
                 </Grid>
 
-                <Grid item>
-                    
-                </Grid>
-
             </Grid>
-        </React.Fragment >
+        </ >
     )
 }
